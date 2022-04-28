@@ -15,16 +15,17 @@ require_once "data.repo.php";
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" routerLink="cars" role="button">eXotic Cars</a>
+            <a href="cars.php" class="btn btn-primary btn-lg" routerLink="cars" role="button"><?= $carTitle ?></a>
         </p>
     </div>
+    <hr>
 
-    <h2 class="my-5 text-center">Nos Pilotes d'Exception</h2>
+    <h2 class="my-5 text-center"><?= $driverTitle ?> d'Exception</h2>
 
     <!-- boucle drivers -->
 
 
-    <div class="d-flex flex-row flex-wrap justify-content-around ">
+    <div class="d-flex flex-row flex-wrap justify-content-around">
         <?php foreach ($drivers as $driver) : ?>
             <div class="card text-center col-3 shadow m-1 ">
 
@@ -59,11 +60,12 @@ require_once "data.repo.php";
             </div>
         <?php endforeach; ?>
     </div>
+    <hr>
 
 
     <!-- boucle ForEach Voitures -->
 
-    <h2 class="my-5 text-center">Nos voitures de courses</h2>
+    <h2 class="my-5 text-center"><?= $carTitle ?> de courses</h2>
 
     <div class="d-flex flex-row flex-wrap justify-content-around">
 
