@@ -25,8 +25,8 @@ require_once "data.repo.php";
 
 
     <div class="d-flex flex-row flex-wrap justify-content-around">
-    <?php foreach ($drivers as $driver) : ?>
-        <div class="card text-center col-3 shadow m-1">
+        <?php foreach ($drivers as $driver) : ?>
+            <div class="card text-center col-3 shadow m-1">
 
                 <div class="card-header bg-dark text-white">
                     <h2 class="card-title">
@@ -56,35 +56,42 @@ require_once "data.repo.php";
                 </div>
                 <hr>
             </div>
-            <?php endforeach; ?>
-</div>
+        <?php endforeach; ?>
+    </div>
 
 
-        <!-- boucle ForEach Voitures -->
+    <!-- boucle ForEach Voitures -->
+
+    <h2 class="my-5 text-center">Nos voitures de courses</h2>
+
+    <div class="d-flex flex-row flex-wrap justify-content-around">
 
 
+    <?php foreach ($cars as $car) : ?>
         <div class="card text-center shadow my-3">
 
-<div class="card-header bg-dark text-white ">
-    <h2 class="card-title"><?= $cars[0]["name"] ?></h2>
-</div>
+        <div class="card-header bg-dark text-white ">
+            <h2 class="card-title"><?= $car["name"] ?></h2>
+        </div>
 
-<div class="card-body">
-    <img src="<?= $cars[0]["coverImage"] ?>" class="img-fluid" alt="photo de bugatti">
-    <hr>
-    <p>Origine:
-        <span><?= $cars[0]["pays"] ?></span>
-    </p>
+        <div class="card-body">
+            <img src="<?= $car["coverImage"] ?>" class="img-fluid" alt="photo de bugatti">
+            <hr>
+            <p>Origine:
+                <span><?= $car["pays"] ?></span>
+            </p>
 
-    <p>Puissance: <span class="badge badge-warning"> <?= $cars[0]["power"] ?> </span> </p>
+            <p>Puissance: <span class="badge badge-warning"> <?= $car["power"] ?> </span> </p>
 
-    <p>0 à 100 km/h: <span><?= $cars[0]["perf"] ?> sec</span></p>
+            <p>0 à 100 km/h: <span><?= $car["perf"] ?> sec</span></p>
 
-    <p>Réserver maintenant !</p>
-    <button class="btn btn-primary ">Réserver</button>
-</div>
-</div>
-<hr>
+            <p>Réserver maintenant !</p>
+            <button class="btn btn-primary ">Réserver</button>
+        </div>
+    </div>
+    <?php endforeach; ?>
+    </div>
+
     <!-- ----------test------------ -->
 
     <?php
@@ -103,7 +110,7 @@ require_once "data.repo.php";
     // }
     ?>
 
-    <?php foreach ($games as $game) : ?>
+    <!-- <?php foreach ($games as $game) : ?>
 
         <div class="card my-2 shadow p-4 text-center ">
             <h2> <?= $game ?> </h2>
@@ -112,7 +119,7 @@ require_once "data.repo.php";
 
 
 
-    <?php endforeach; ?>
+    <?php endforeach; ?> -->
 
 
 
