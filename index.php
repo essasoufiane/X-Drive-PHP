@@ -143,25 +143,36 @@ require_once "data.repo.php";
 
 
     <?php
-    $tabs = [[1, 2, 3], [3, 4, 5, 4]];
+    // $tabs = [[1, 2, 3], [3, 4, 5, 4]];
     // var_dump($drivers);
 
 
-    $i = 0;
-    while ($i < count($tabs)) {
-        $j = 0;
-        while ($j < count($tabs[$i])) {
-            echo "<p>" . $tabs[$i][$j] . "</p>";
-            $j++;
-        }
-        $i++;
-    }
-
-
-
-
-
+    // $i = 0;
+    // while ($i < count($tabs)) {
+    //     $j = 0;
+    //     while ($j < count($tabs[$i])) {
+    //         echo "<p>" . $tabs[$i][$j] . "</p>";
+    //         $j++;
+    //     }
+    //     $i++;
+    // }
     ?>
+
+<?php foreach ($games as $game ): ?>
+
+<div class="card my-2 shadow p-4 text-center ">
+    <h2> <?= $game ?> </h2>
+    <button class="btn btn-success">Jouer</button>
+</div>
+
+
+
+<?php endforeach; ?>
+
+
+
+
+
 
 
 </div>
