@@ -24,9 +24,9 @@ require_once "data.repo.php";
     <!-- boucle drivers -->
 
 
-    <div class="card-deck flex-lg-row flex-md-row flex-xl-row flex-column">
-        <div class="card text-center shadow my-3">
-            <?php foreach ($drivers as $driver) : ?>
+    <div class="d-flex flex-row flex-wrap justify-content-around">
+    <?php foreach ($drivers as $driver) : ?>
+        <div class="card text-center col-3 shadow m-1">
 
                 <div class="card-header bg-dark text-white">
                     <h2 class="card-title">
@@ -54,13 +54,37 @@ require_once "data.repo.php";
                     </button>
 
                 </div>
-                <?php endforeach; ?>
+                <hr>
             </div>
-        </div>
+            <?php endforeach; ?>
+</div>
 
-    <!-- -------test----------- -->
+
+        <!-- boucle ForEach Voitures -->
 
 
+        <div class="card text-center shadow my-3">
+
+<div class="card-header bg-dark text-white ">
+    <h2 class="card-title"><?= $cars[0]["name"] ?></h2>
+</div>
+
+<div class="card-body">
+    <img src="<?= $cars[0]["coverImage"] ?>" class="img-fluid" alt="photo de bugatti">
+    <hr>
+    <p>Origine:
+        <span><?= $cars[0]["pays"] ?></span>
+    </p>
+
+    <p>Puissance: <span class="badge badge-warning"> <?= $cars[0]["power"] ?> </span> </p>
+
+    <p>0 à 100 km/h: <span><?= $cars[0]["perf"] ?> sec</span></p>
+
+    <p>Réserver maintenant !</p>
+    <button class="btn btn-primary ">Réserver</button>
+</div>
+</div>
+<hr>
     <!-- ----------test------------ -->
 
     <?php
