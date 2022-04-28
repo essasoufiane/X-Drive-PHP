@@ -142,6 +142,27 @@ require_once "data.repo.php";
     </div>
 
 
+    <?php
+    $tabs = [[1, 2, 3], [3, 4, 5, 4]];
+    // var_dump($drivers);
+
+
+    $i = 0;
+    while ($i < count($tabs)) {
+        $j = 0;
+        while ($j < count($tabs[$i])) {
+            echo "<p>" . $tabs[$i][$j] . "</p>";
+            $j++;
+        }
+        $i++;
+    }
+
+
+
+
+
+    ?>
+
 
 </div>
 
