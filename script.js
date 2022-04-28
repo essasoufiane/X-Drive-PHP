@@ -1,8 +1,8 @@
 // console.log('ok')
 
-let i = 0;
+// let i = 0;
 
-while (i < 10){
-    console.log('ok')
-    i++;
-}
+// while (i < 10){
+//     console.log('ok')
+//     i++;
+// }

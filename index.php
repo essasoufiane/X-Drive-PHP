@@ -24,9 +24,9 @@ require_once "data.repo.php";
     <!-- boucle drivers -->
 
 
-    <div class="d-flex flex-row flex-wrap justify-content-around">
+    <div class="d-flex flex-row flex-wrap justify-content-around ">
         <?php foreach ($drivers as $driver) : ?>
-            <div class="card text-center col-3 shadow m-1">
+            <div class="card text-center col-3 shadow m-1 ">
 
                 <div class="card-header bg-dark text-white">
                     <h2 class="card-title">
@@ -52,6 +52,7 @@ require_once "data.repo.php";
                     <button class="btn btn-danger border">
                         <i class="fas fa-thumbs-down"></i>
                     </button>
+                    <p class="mb-0">nombre de like: <?= $driver["likeIts"] ?></p>
 
                 </div>
                 <hr>
@@ -88,6 +89,7 @@ require_once "data.repo.php";
             <p>Réserver maintenant !</p>
             <button class="btn btn-primary ">Réserver</button>
         </div>
+        <hr>
     </div>
     <?php endforeach; ?>
     </div>
