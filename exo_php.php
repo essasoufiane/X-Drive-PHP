@@ -57,7 +57,7 @@ echo "<hr>";
 <!-- formualaire de recherche -->
 
 <form method="post">
-Nom : <input type="text" name="nom" size="12"><br>
+Nom : <input type="file" name="nom" size="12"><br>
 Prénom : <input type="text" name="prenom" size="12">
 <input type="submit" value="OK">
 </form>
