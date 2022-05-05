@@ -18,7 +18,7 @@ $classMars = [
     ["name" => "natasha" , "lunettes" => true , "genre" => "femme"],
 ];
 
-
+// trie tableau lunettes
 $lunette=0;
 $nonLunette=0;
 foreach ($classMars as $class) {
@@ -35,6 +35,7 @@ echo "$nonLunette personne(s) ont  pas des lunettes <br>";
 
 echo "<hr>";
 
+// trie tableau genres
 $homme=0;
 $femme=0;
 foreach ($classMars as $class) {
@@ -50,12 +51,46 @@ $femme++;
 echo "$homme Hommes <br>";
 echo "$femme Femmes <br>";
 
+echo "<hr>";
 ?>
-<input type="text">
-<button>Rechercher</button>
 
+<!-- formualaire de recherche -->
+
+<form method="post">
+Nom : <input type="text" name="nom" size="12"><br>
+Prénom : <input type="text" name="prenom" size="12">
+<input type="submit" value="OK">
+</form>
 
 <?php
+$prenom = $_POST['prenom'];
+$nom = $_POST['nom'];
+print("<center>Bonjour $prenom $nom</center>");
+?>
+<?php
+
+$tabs= [11,5,8,9,22,20,19,77,85,87,6];
+
+$reponse = [];
+
+
+foreach ($tabs as $number) {
+   
+
+    if($number >= 20){
+        echo "  - ".  $number;
+        $reponse[] = $number;
+     
+    }
+
+}
+echo '<br>';
+echo implode(", " , $reponse) . " il y a " . count($reponse) . " chiffre(s) au dessus de 20";
+
+// var_dump($reponse);
+
+// ----------------------test---------------------
+
 // $rand_keys = array_rand($classMars, 2);
 // echo $classMars[$rand_keys[0]] . "\n";
 // echo $classMars[$rand_keys[1]] . "\n";
@@ -99,3 +134,4 @@ echo "$femme Femmes <br>";
 // }
 
 // var_dump($classMars) ;
+
