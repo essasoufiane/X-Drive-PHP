@@ -3,3 +3,7 @@ symfony new YesCode --version=lts --webapp
 
 2eme étape création de page d'accueil avec cette commande :
 php bin/console make:controller Home
+
+3eme etape supression ligne 9 et 13 dans base.html.twig :
+{{ encore_entry_script_tags('app') }}
+
