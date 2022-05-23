@@ -1,0 +1,5 @@
+1er2tape création de projet symfony avec cette commande:
+symfony new YesCode --version=lts --webapp 
+
+2eme étape création de page d'accueil avec cette commande :
+php bin/console make:controller Home
