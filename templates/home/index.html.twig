@@ -1,9 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Hello HomeController!
+{% endblock %}
 
 {% block body %}
-	{% for name in name %}
-		<li>{{name.id}}-{{name.name}}</li>
+
+	<div class="container">
+		{# test #}
+		{# {% for fruits in fruits %}
+				<li>{{fruits.id}}-{{fruits.name}}</li>
+			{% endfor %} #}
+
+			<div class="jumbotron text-center my-5 shadow animate__animated animate__backInDown"> <h1 class="display-4 animate__animated animate__zoomInDown animate__delay-1s">Bienvenue sur<span class="text-info"> GTA fiveM</span>
+				!</h1>
+			<p class="lead animate__animated animate__zoomInDown animate__delay-2s">Coucou toi !
+			</p>
+			<hr class="my-4">
+			<p class=" animate__animated animate__zoomInDown animate__delay-3s">Retrouvez nos derniers articles sur les technos les plus hype du moment !</p>
+			<p class="lead">
+				<a class="btn btn-primary btn-lg animate__animated animate__zoomInDown animate__delay-4s" href="#" role="button">
+					&lt;/&gt; Actualités &lt;/&gt;
+				</a>
+			</p>
+		</div>
+	</div>
+	{% for user in user %}
+		<li>{{user.id}}-{{user.name}}-{{user.firstname}}</li>
 	{% endfor %}
-    {% endblock %}
+{% endblock %}

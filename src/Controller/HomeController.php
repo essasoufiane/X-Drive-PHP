@@ -17,6 +17,7 @@ class HomeController extends AbstractController
         $perso = new Accueil();
         // je donne une valeur au name de l'objet Acceuil
         $perso->setName("soufiane");
+        $perso->setFirstname('Essa');
         // je persist les donnéees pour envoyer dans la bdd
         $manager->persist($perso);
         // je tir la cahsse d'eau pour envoyer le tout dans la bdd
@@ -25,8 +26,8 @@ class HomeController extends AbstractController
         $affiche = $repo->findAll();
 
         return $this->render('home/index.html.twig', [
-            // je retourne le total de la bdd dans la vue avec lalias 'name'
-            'name' => $affiche,
+        // je retourne le total de la bdd dans la vue avec lalias 'name'
+            'user' => $affiche,
         ]);
     }
 }
