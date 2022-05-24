@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'home_page')]
+    #[Route('/home', name: 'home_page')]
     public function index(EntityManagerInterface $manager, AccueilRepository $repo)
     {
         // je créé un nouveau objet que j'appelle Acceuil dans la var perso
